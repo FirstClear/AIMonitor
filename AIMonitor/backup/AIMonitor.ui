@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AIMonitorClass</class>
+ <widget class="QMainWindow" name="AIMonitorClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1942</width>
+    <height>1103</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AIMonitor</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">#frame{
+background-size: contain;
+border-image:url(:/AIMonitor/img/dabeijing.png);
+border-top-left-radius:5px;
+
+border-top-right-radius:5px;
+
+border-bottom-left-radius:5px;
+
+border-bottom-right-radius:5px;
+
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="4,36,18">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="topFrame">
+         <property name="minimumSize">
+          <size>
+           <width>1076</width>
+           <height>115</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="top" stretch="1,5,20,8,1,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QLabel" name="projectLabel">
+            <property name="minimumSize">
+             <size>
+              <width>350</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>39</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#projectLabel{
+	color:#FFFFFF;
+    font-size:20px;
+    padding-left:15px;
+	font-family: Microsoft YaHei;
+	padding-top:12px;
+}</string>
+            </property>
+            <property name="text">
+             <string>公司-项目</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="title">
+            <property name="minimumSize">
+             <size>
+              <width>369</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>369</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#title{
+	border-image: url(:/AIMonitor/img/logo--.png);
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="signalButton">
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="whatsThis">
+             <string>最小化</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#signalButton {  
+	image: url(:/AIMonitor/img/xinhao.png);
+	background: transparent; 
+	padding-top:12px; 
+	
+}  
+
+/* 鼠标按下时的效果 */  
+#miniButton:pressed {  
+    /* 改变背景色 */  
+    background-color:rgb(40,85,20);  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:6px;  
+    padding-top:18px;  
+}  
+
+/* 按钮样式 */  
+#miniButton:flat {  
+    border:2px solid red;  
+}  </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/AIMonitor/icons/minus.png</normaloff>:/AIMonitor/icons/minus.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QPushButton" name="closeButton">
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#closeButton {
+	
+	image: url(:/AIMonitor/img/guanbi.png);
+	background: transparent; 
+	padding-top:12px;
+}  
+
+/* 鼠标按下时的效果 */  
+#closeButton:pressed {  
+    /* 改变背景色 */  
+    background-color:rgb(40,85,20);  
+
+    /* 改变边框风格 */  
+    border-style:inset;  
+
+    /* 使文字有一点移动 */  
+    padding-left:6px;  
+    padding-top:18px;  
+}  
+
+/* 按钮样式 */  
+#closeButton:flat {  
+    border:2px solid red;  
+}  </string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>:/AIMonitor/icons/close.png</normaloff>:/AIMonitor/icons/close.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="content" stretch="5,20,5">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <property name="leftMargin">
+          <number>62</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>60</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="leftFrame">
+           <property name="minimumSize">
+            <size>
+             <width>371</width>
+             <height>758</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>371</width>
+             <height>758</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#leftFrame{
+	
+	border-image: url(:/AIMonitor/img/xiaobeijingzuo.png);
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="listviewFrame">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>40</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>280</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="monitorLabel">
+              <property name="styleSheet">
+               <string notr="true">color:#FFFFFF;
+font-size:14px;
+padding-left:15px;
+font-family: Microsoft YaHei;</string>
+              </property>
+              <property name="text">
+               <string>本区监控</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListView" name="listView">
+              <property name="styleSheet">
+               <string notr="true">background-color:transparent</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="videoLabel">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="rightFrame">
+           <property name="minimumSize">
+            <size>
+             <width>371</width>
+             <height>758</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>371</width>
+             <height>758</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#rightFrame{
+	border-image: url(:/AIMonitor/img/xiaobeijingyou.png)
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,2,0,5">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>40</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>280</number>
+            </property>
+            <item alignment="Qt::AlignTop">
+             <widget class="QLabel" name="dataLabel">
+              <property name="minimumSize">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color:#FFFFFF;
+font-size:14px;
+padding-left:15px;
+font-family: Microsoft YaHei;</string>
+              </property>
+              <property name="text">
+               <string>数据展示</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="cameralMain">
+              <property name="minimumSize">
+               <size>
+                <width>337</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>337</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#cameralMain{
+border-image: url(:/AIMonitor/img/xiaokuang.png);
+}
+</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,15">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="cameralLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-image: url(:/AIMonitor/img/zhuapai.png);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="cameralFrame">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>114514</width>
+                   <height>114514</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color:transparent</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="cameralTextLabel">
+                    <property name="minimumSize">
+                     <size>
+                      <width>80</width>
+                      <height>22</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>80</width>
+                      <height>22</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">#cameralTextLabel{
+width: 64px;
+height: 22px;
+opacity: 0.6;
+font-family: PingFangSC-Regular;
+font-size: 16px;
+color: #FFFFFF;
+letter-spacing: 0;
+font-weight: 400;
+padding-left:5px
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>抓拍次数</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="cameralTotalLabel">
+                    <property name="minimumSize">
+                     <size>
+                      <width>75</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">#cameralTotalLabel{
+font-family: PingFangSC-Semibold;
+font-size: 32px;
+color: #00FFFD;
+padding-bottom:10px;
+letter-spacing: 0;
+font-weight: 600;
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>32566666</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="warningMain">
+              <property name="minimumSize">
+               <size>
+                <width>337</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>337</width>
+                <height>84</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#warningMain{
+border-image: url(:/AIMonitor/img/xiaokuang.png);
+}
+</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="3,15">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <item alignment="Qt::AlignLeft">
+                <widget class="QLabel" name="warningLabel">
+                 <property name="minimumSize">
+                  <size>
+                   <width>50</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>50</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-image: url(:/AIMonitor/img/yujing.png);</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QFrame" name="warningFrame">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>114514</width>
+                   <height>114514</height>
+                  </size>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="warningTextLabel">
+                    <property name="styleSheet">
+                     <string notr="true">#warningTextLabel{
+width: 64px;
+height: 22px;
+opacity: 0.6;
+font-family: PingFangSC-Regular;
+font-size: 16px;
+color: #FFFFFF;
+letter-spacing: 0;
+font-weight: 400;
+padding-left:5px
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>违规次数</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="warningTotalLabel">
+                    <property name="minimumSize">
+                     <size>
+                      <width>75</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>200</width>
+                      <height>45</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">#warningTotalLabel{
+font-family: PingFangSC-Semibold;
+font-size: 32px;
+color: #00FFFD;
+padding-bottom:10px;
+letter-spacing: 0;
+font-weight: 600;
+
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>1145140000</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QFrame" name="bottom">
+         <layout class="QHBoxLayout" name="contentButtom" stretch="10,10,10,10,17">
+          <property name="leftMargin">
+           <number>430</number>
+          </property>
+          <property name="rightMargin">
+           <number>1</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>监控1</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>监控2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>监控2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>TextLabel</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>监控2</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../AIMonitor.qrc"/>
+ </resources>
+ <connections/>
+</ui>

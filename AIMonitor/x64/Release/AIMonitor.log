@@ -1,0 +1,4 @@
+﻿  HIK.cpp
+e:\硕士开题\aimonitor\aimonitor\hik.h(52): warning C4005: “MAX_OUTPUTS”: 宏重定义
+  e:\硕士开题\aimonitor\aimonitor\generaldef.h(10): note: 参见“MAX_OUTPUTS”的前一个定义
+  AIMonitor.vcxproj -> E:\硕士开题\AIMonitor\x64\Release\AIMonitor.exe

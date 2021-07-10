@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="AIMonitor">
+    <file>img/dabeijing.png</file>
+    <file>img/fangdasuoxiao.png</file>
+    <file>img/fangdasuoxiao01.png</file>
+    <file>img/guanbi.png</file>
+    <file>img/logo--.png</file>
+    <file>img/shezhi.png</file>
+    <file>img/xiaobeijingyou.png</file>
+    <file>img/xiaobeijingzuo.png</file>
+    <file>img/xiaokuang.png</file>
+    <file>img/xinhao.png</file>
+    <file>img/yujing.png</file>
+    <file>img/zhuapai.png</file>
+  </qresource>
+  <qresource prefix="login">
+    <file>img/login/#02FCFB.png</file>
+    <file>img/login/bj.png</file>
+    <file>img/login/chequjiankong-bj.png</file>
+    <file>img/login/denglubeijing.png</file>
+    <file>img/login/guanbi.png</file>
+    <file>img/login/hebing.png</file>
+    <file>img/login/jihuotanchuang.png</file>
+    <file>img/login/mima.png</file>
+    <file>img/login/mima-bj.png</file>
+    <file>img/login/mingcheng.png</file>
+    <file>img/login/sezhi：#48C9F1.png</file>
+    <file>img/login/yonghu-bj.png</file>
+    <file>img/login/youyou.png</file>
+    <file>img/login/zuozuo.png</file>
+  </qresource>
+</RCC>

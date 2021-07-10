@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2DB96137-FC7F-4C27-B1FE-9D8C4B38414F}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>QT5.9.0</QtInstall>
+    <QtModules>core;gui;multimediawidgets;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>QT5.9.0</QtInstall>
+    <QtModules>core;gui;multimedia;multimediawidgets;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\QT\5.9\msvc2017_64\include;D:\deeplearn\opencv4.5.2\opencv\build\include;D:\deeplearn\opencv4.5.2\opencv\build\include\opencv2;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\QT\5.9\msvc2017_64\lib;D:\deeplearn\opencv4.5.2\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>D:\QT\5.9\msvc2017_64\include;D:\deeplearn\opencv4.5.2\opencv\build\include;D:\deeplearn\opencv4.5.2\opencv\build\include\opencv2;D:\deeplearn\opencv4.5.2\opencv\build\include\opencv;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\QT\5.9\msvc2017_64\lib;D:\deeplearn\opencv4.5.2\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>D:\QT\5.9\msvc2017_64\lib\Qt5Widgets.lib;D:\QT\5.9\msvc2017_64\lib\Qt5OpenGL.lib;D:\QT\5.9\msvc2017_64\lib\Qt5Gui.lib;D:\QT\5.9\msvc2017_64\lib\Qt5Core.lib;D:\QT\5.9\msvc2017_64\lib\Qt5FontDatabaseSupport.lib;D:\deeplearn\opencv4.5.2\opencv\build\x64\vc15\lib\opencv_world452.lib;C:\Users\Administrator\source\repos\AIMonitor\AIMonitor\HCNetSDK.lib;C:\Users\Administrator\source\repos\AIMonitor\AIMonitor\PlayCtrl.lib;D:\QT\5.9\msvc2017_64\lib\Qt5Multimedia.lib;D:\QT\5.9\msvc2017_64\lib\Qt5MultimediaWidgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\QT\5.9\msvc2017_64\include\QtFontDatabaseSupport;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>D:\QT\5.9\msvc2017_64\lib\Qt5Widgetsd.lib;D:\QT\5.9\msvc2017_64\lib\Qt5OpenGLd.lib;D:\QT\5.9\msvc2017_64\lib\Qt5Guid.lib;D:\QT\5.9\msvc2017_64\lib\Qt5Cored.lib;D:\QT\5.9\msvc2017_64\lib\Qt5FontDatabaseSupportd.lib;D:\deeplearn\opencv4.5.2\opencv\build\x64\vc15\lib\opencv_world452d.lib;C:\Users\Administrator\source\repos\AIMonitor\AIMonitor\HCNetSDK.lib;C:\Users\Administrator\source\repos\AIMonitor\AIMonitor\PlayCtrl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="VideoDialog.cpp" />
+    <QtRcc Include="AIMonitor.qrc" />
+    <QtUic Include="AIMonitor.ui">
+      <QtUicDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\</QtUicDir>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">“D:\QT\5.9\msvc2017_64\bin\uic.exe” -o “.\GeneratedFiles\ui_%(Filename).h” “%(FullPath)”</ExecutionDescription>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\QT\5.9\msvc2017_64\bin\uic.exe</AdditionalDependencies>
+      <ExecutionDescription Condition="'$(Configuration)|$(Platform)'=='Release|x64'">“D:\QT\5.9\msvc2017_64\bin\uic.exe” -o “.\GeneratedFiles\ui_%(Filename).h” “%(FullPath)”</ExecutionDescription>
+      <QtUicDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\</QtUicDir>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\QT\5.9\msvc2017_64\bin\uic.exe</AdditionalDependencies>
+    </QtUic>
+    <ClCompile Include="AIMonitor.cpp" />
+    <ClCompile Include="Capture.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="HIK.cpp" />
+    <ClCompile Include="LoginWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="LoginWidget.ui" />
+    <QtUic Include="VideoDialog.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="LoginWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="VideoDialog.h" />
+    <QtMoc Include="Capture.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="DataType.h" />
+    <ClInclude Include="DecodeCardSdk.h" />
+    <ClInclude Include="Des.h" />
+    <ClInclude Include="GeneralDef.h" />
+    <ClInclude Include="HCNetSDK.h" />
+    <QtMoc Include="HIK.h" />
+    <ClInclude Include="PlayM4.h" />
+    <ClInclude Include="plaympeg4.h" />
+    <QtMoc Include="AIMonitor.h" />
+    <ClInclude Include="GeneratedFiles\ui_AIMonitor.h" />
+    <ClInclude Include="GeneratedFiles\ui_LoginWidget.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.ini" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\CppRequests.0.0.2\build\native\CppRequests.targets" Condition="Exists('..\packages\CppRequests.0.0.2\build\native\CppRequests.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\CppRequests.0.0.2\build\native\CppRequests.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CppRequests.0.0.2\build\native\CppRequests.targets'))" />
+  </Target>
+</Project>
